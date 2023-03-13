@@ -316,15 +316,15 @@
   }
   
   .card--2 .card__img, .card--2 .card__img--hover {
-      background-image: url(src/img/covers/UDS.png);
+      background-image: url(./src/img/covers/UDS.png);
   }
 
   .card--3 .card__img, .card--3 .card__img--hover {
-    background-image: url(src/img/covers/UDS.png);
+    background-image: url(../src/img/covers/UDS.png);
 }
 
 .card--4 .card__img, .card--4 .card__img--hover {
-  background-image: url(src/img/covers/UDS.png);
+  background-image: url(/src/img/covers/UDS.png);
 }
 
 .card--5 .card__img, .card--5 .card__img--hover {
