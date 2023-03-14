@@ -123,9 +123,9 @@
     color: var(--grey1);
   }
 
-   svg {
+   li > a > svg {
     width: 16px;
-    fill: inherit;
+    fill: var(--grey1);
   }
   
   .nav-list a:hover {
@@ -466,11 +466,6 @@
   footer > p {
     margin: 2rem;
     display: flex;
-  }
-
-  footer > p > a{
-    margin-left: 0.8rem;
-    font-size: 1rem;
   }
 
   footer > p > a:hover{
