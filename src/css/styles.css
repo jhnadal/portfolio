@@ -327,11 +327,11 @@
   }
   
   .card--1 .card__img, .card--1 .card__img--hover {
-      background-image: url("https://jhnadal.github.io/portfolio/src/img/covers/uds.png");
+      background-image: url("https://jhnadal.github.io/portfolio/src/img/covers/uds.webp");
   }
   
   .card--2 .card__img, .card--2 .card__img--hover {
-    background-image: url("https://jhnadal.github.io/portfolio/src/img/covers/uds.png");
+    background-image: url("https://jhnadal.github.io/portfolio/src/img/covers/oc.webp");
   }
 
   .card--3 .card__img, .card--3 .card__img--hover {

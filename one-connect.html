@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width">
-    <title> John Nadal Portfolio - Universal Design System</title>
+    <title> John Nadal Portfolio - OneConnect</title>
     <link rel="stylesheet" href="src/css/styles.css" type="text/css">
     <link rel="stylesheet" href="src/css/work.css" type="text/css">
-    <meta name="description" content="Work example on what was done for TELUS at Universal Design System Product">
+    <meta name="description" content="ExxonMobil - OneConnect - Work example on what was done for ExxonMobil at OneConnect">
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -53,152 +53,285 @@
   <section id="welcome-section" class="welcome-section">
     <div class="hero">
       <h1>
-        Re-defining design systems at TELUS with Universal Design System
+        Transforming petrochemical business
       </h1>
-      <img class="cover" src="src/img/covers/uds.png" width="600" height="600" alt="cover with project image"/>
+      <img class="cover" src="src/img/covers/oc.webp" width="1000" height="540" alt="cover with project image"/>
     </div>
   </section>
 
   <section>
     <div class="row row-left logo-align">
-    <img class="logo" src="src/img/projects/universal-design-system/telus-logo.svg" width="200" height="100" alt="cover with project image"/>
-    2022 - 2023
+    <img class="logo" src="src/img/projects/one-connect/em-logo.svg" width="160" height="60" alt="cover with project image"/>
+    2018 - 2020
     </div>
 
     <div class="column title-container">
       <span class="eye">Company / Product</span>
-      <h2>TELUS is a leading Telecom company in Canada aiming for more consistency across its digital experiences.</h2>
+      <h2>ExxonMobil Product Solutions is one of the largest chemical companies worldwide. At the time they were looking how to develop a digital first business model</h2>
     </div>
 
-    <p>TELUS had already created Design Systems, but only for a single brand's websites.
-      As the design knowledge grew, they wanted a system that could cover more products and support an omnichannel business model.
-      To accomplish this, they created the Universal Design System (UDS) in late 2019. The goal was to have one library for all TELUS brands (including Koodo and Public Mobile) on any platform (Android, iOS, and Web).
-      This would allow for consistency in guidelines, standards, styles, and components.</p>
+    <p>
+      Digital transformation and keeping up with an ever-changing market is a concern for many traditional companies, including ExxonMobil Product Solutions.
+      We wanted to understand what this change meant for the business, the customers, and the market. As we pondered these questions, we found ourselves asking,
+      "Where is the business going? What are the things we know? What are the things we don't?" It was a fuzzy moment, with no guide or existing route for answers.
+    </p>
       
-    <p>The intention was good and the idea had lots of potential, however, some practical aspects were not fully considered, confusing the product's direction. After two years of struggles
-        and low adoption rates, new members were onboarded and we were allowed to re-assess UDS and help the company.</p>
-      
-    <div class="highlight">
-      <span class="highlight-title">The challenge</span>
-      <p>While UDS was a powerful product, it suffered from unnecessary complexity and difficulty in maintenance, leading to people not understanding how to use it, hence not using it.
-        As a result, I reviewed the product vision and strategy, and rallied the team to shift their focus towards providing a more user-friendly platform for our customers.</p>
-    </div>
+        <div class="column title-container">
+          <span class="eye">First step</span>
+          <h2>Ask Around, what are people thinking?</h2>
+        </div>  
+        
 
-    <p>To simplify UDS, we talked to designers and developers at TELUS delivery teams to understand what they needed and wanted.
-      Based on their feedback, we improved the developer experience by making documentation easily accessible and providing regular updates on component use.
-      We also created an open Slack community for anyone interested in learning more about UDS.</p>
-
-    <p>Next, we gathered input from each brand design team to understand their goals and current offerings. We found that each brand was going in its own direction focused only on designing screens on Figma
-      without considering their feasibility or best practices</p>
-
-    <p>To structure the system, we focused on "base components," reusable code snippets that could be branded using two data layers: "palettes" and "themes."
-      Each brand was given a palette and a theme, with the brand palette containing design tokens to represent brand identity, and the themes serving as the interfaces between the palettes and the components.
-      In other words, the palettes contained design options, and the themes represented the design decisions for each component.</p>
-
-    <figure>
-    <img class="" src="src/img/projects/universal-design-system/palette.svg" width="1000" height="150" alt="examples of tokens"/>
-    <figcaption>Example of token categories defined for palettes</figcaption>
-    </figure>
-
-    <p>We started by reviewing the 60 existing components and defining their states, interactions, properties, and variants.
-      This helped us understand what each component should and should not do, and we enforced a common structure and rules across all brands.
-      We repeated this process for the 26 new components we created. Let's take the button component as an example.</p>
-
-    <figure>
-    <img class="" src="src/img/projects/universal-design-system/telus-button.png" width="800" height="300" alt="example of TELUS button component"/>
-    <figcaption>Structure for the buttons component, states, and variants (size, priority, danger). </figcaption>
-    </figure>
-
-    <p>To design the buttons component, we analyzed the problems the community was trying to solve with it to defined its structure, requirements, and specifications.
-      After several cycles, we decided the button could be customized using the following tokens: <i>alignSelf, backgroundColor, borderColor, borderRadius, borderRadius, borderWidth, color, fontName, fontSize, fontWeight, icon, iconSize, iconSpace, lineHeight, minWidth, opacity, outerBackgroundColor, outerBorderColor, outerBorderGap, outerBorderWidth, paddingBottom, paddingLeft, paddingRight, paddingTop, shadow, textAlign, textLine, textLineStyle and width.</i>
-      
-      We also defined interaction states, rules depending on the platform, and variants like <i>Default, Hover, Pressed, Focus, Focus and Pressed, Inactive, danger </i>(for destructive patterns that lead to loss of information), <i>inverse</i> (for darker backgrounds), <i>priority</i> (to define visual hierarchy of interactions), <i>size</i> (to control the size of the label and button) and <i>width</i> for full-width use-cases.</p>
-
-    <p>With these tokens and variables defined, we were able to discuss themes and palettes with the brands. We defined a shared naming convention and rules so teams working across brands could create multi-brand experiences without surprises. Brands could customize existing the components based on the available tokens or request new ones to further customize the component.</p>
-
-    <figure>
-      <img src="src/img/projects/universal-design-system/multi-brand-buttons.png" width="800" height="150" alt="Multi-brand buttons"/>
-      <figcaption>Structure for the buttons component, states, and variants (size, priority, danger). </figcaption>
-    </figure>
+      <p>We started with desk research and realized that our company was heavily reliant on tools and always looked for the next big tool to solve our problems.
+        That was the first piece of the puzzle.
+        Next, we interviewed our internal stakeholders and discovered that our customer service process was unfriendly and bureaucratic.
+        Everything was mediated by an agent, resulting in long queues.</p>
     
+      <figure>
+        <img class="" src="src/img/projects/one-connect/process.webp" width="1000" height="600" alt="examples of tokens"/>
+        <figcaption>Example of a previous order placement process.</figcaption>
+      </figure>
 
-    <div class="column title-container">
-      <span class="eye">Taking a step further</span>
-      <h2>🙋🏻‍♂️ Community contribution</h2>
-    </div>
+      <p>During our customer interviews, we discovered two opposing experiences. From 9 to 5, customers would request orders through email, phone, or attempt to log into our frequently unavailable online product. But after work, they could easily place orders on online marketplaces with just one tap. We called this the "Amazon experience".</p>
 
-    <p>The proposed changes and standardization were successful, but the team of 8 people couldn't maintain all the standards for every brand and support any new brand needs. The solution was to invite community contribution.</p>
+      <p>Since B2B and B2C products were different in 2017, we weren't sure how this difference would affect our business. Stakeholders suggested features such as "1 click order" to have trucks available at customer plants. But would this experience be the same for customers in North America, South America, Europe, and Asia?</p>
 
-    <p>Instead of having one team responsible for all component changes, the core team would support the base components, palettes, and themes for TELUS, Koodo, and Public Mobile.
-      Other teams could contribute specific components or extend themes for brand-specific variants. They could even request a new theme or palette for a specific need.</p>
+      <p>After the second round of interviews and exploration, we began to understand what each stakeholder was looking for.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Stakeholders</th>
+            <th>Customers</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Optimize the internal work.</td>
+            <td>Have more information and status about their orders.</td>
+          </tr>
+          <tr>
+            <td>Reduce waiting times.</td>
+            <td>Do not have to provide the same information for both internal and external systems.</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Have a highly available system.</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Most customers placed orders for the whole year at the same time, they expected an easier way for doing so.</td>
+          </tr>
+        </tbody>
+      </table>
+
+    <p>Those insights were critical to us and with that information we started crafting a one-stop shop to automate and simplify every customer service action. We made all the information we could available for customers (regulatory documents, technical sheets, specifications, open orders, order history, place/change/cancel orders, reports, and open suggestions and complaints) so EM Chemical would be able to provide faster and better responses.</p>
+
+      <div class="column title-container">
+        <span class="eye">Using the data</span>
+        <h2>Designing a solution</h2>
+      </div> 
+        
+        
+        <p>We wanted to deliver a valuable solution without risking a delayed delivery of our complex product.
+          To determine the value and prioritize our scope, we mediated a new round of conversations and used card sorting to understand our customers'
+          mental models and find low-hanging fruits. The results of these sessions were:</p>
+
+        <ol>
+          <li>Order Placement</li>
+          <li>Order history</li>
+          <li>Regulatory documents</li>
+          <li>Track orders</li>
+          <li>Open requests</li>
+        </ol>
+
+        <p> To move and learn quickly, we created low-fidelity prototypes and discussed them with internal support staff.
+          After assessing changes with developers, we conducted online usability sessions with customers to validate our assumptions and propositions.
+          Our prototypes quickly evolved into high fidelity, thanks to our UI effort of componentization.
+        </p>
+
+        <h2>Order placement</h2>
+        <div class="gallery two">
+        <figure>
+          <img class="" src="src/img/projects/one-connect/ocs-1.webp" width="500" height="350" alt="OCS main screen"/>
+          <figcaption>Previous tool was dated, with low availability for customers.</figcaption>
+        </figure>
+        <figure>
+          <img class="" src="src/img/projects/one-connect/ocs-2.webp" width="500" height="350" alt="image of product selection on OCS"/>
+          <figcaption>Interactions were heavily reliant on dropdowns and memorization of internal codes.</figcaption>
+        </figure>
+        </div>
+        <p>
+        </div>
+          Although the previous product allowed order placement, it was difficult for customers to use, especially for new ones, because they had to
+          memorize internal codes for shipping methods, products, combinations of products, packages, and shipping methods.
+          To improve this, we designed our product with three guiding principles in mind:
+        </p>
+        <h3>Clarity</h3>
+        <p>
+          We made sure that the information was clear and easily accessible.
+          We used visual principles to create a clear hierarchy, white spaces to guide the reading, and proper contrast for visibility.
+        </p>
+        <h3>Efficiency</h3>
+        <p>
+          We broke down complex processes into smaller steps to make the product more efficient.
+          We also made sure that the behavior and states of the components were designed to prevent errors and ensure user efficiency.
+        </p>
+        <h3>Consistency</h3>
+        <p>
+          We made sure that each screen, grid, and component followed the same set of rules to provide a consistent experience for the user.
+        </p>
+
+        <figure>
+          <img class="" src="src/img/projects/one-connect/oc-home.webp" width="1000" height="600" alt="OneConnect Homescreen"/>
+          <figcaption>OneConnect home screen, aims to welcome users and prioritize the most common actions</figcaption>
+        </figure>
+
+        <figure>
+          <img class="" src="src/img/projects/one-connect/oc-menu.webp" width="1000" height="260" alt="navigation menu"/>
+          <figcaption>Order placement has various details to be considered, our intention was to provide clarity, buttons cannot be interacted if no input is provided, the list of products displays and automatically filter compatible shipping methods, on the right, there are always visible components to inform the order summary.</figcaption>
+        </figure>
+
+        <figure>
+          <img class="" src="src/img/projects/one-connect/oc-select-products.webp" width="1000" height="540" alt="selecting products"/>
+          <figcaption>Example of a previous order placement process.</figcaption>
+        </figure>
+
+        <div class="gallery three">
+
+        <figure>
+          <img class="" src="src/img/projects/one-connect/oc-select.webp" width="350" height="150" alt="navigational guidance"/>
+          <figcaption>The top component informs the step in the process and provides context for users.</figcaption>
+        </figure>
+
+        <figure>
+          <img class="" src="src/img/projects/one-connect/oc-product-list.webp" width="350" height="150" alt="product list"/>
+          <figcaption>Product listing presents the relevant information for each item.</figcaption>
+        </figure>
+
+        <figure>
+          <img class="" src="src/img/projects/one-connect/oc-side.webp" width="200" height="325" alt="side-cards"/>
+          <figcaption>Summary components are contextual and allow the user to easily navigate the order placing process.</figcaption>
+        </figure>
+      </div>
+
+      <figure>
+        <img class="" src="src/img/projects/one-connect/oc-recurrent.webp" width="1000" height="540" alt="placing recurrent orders"/>
+        <figcaption>To help users that placed recurrent orders, instead of repeating the processing many times, we conceived a functionality to use parameters that were already provided to place multiple orders at once.</figcaption>
+      </figure>
+
+      <figure>
+        <img class="" src="src/img/projects/one-connect/oc-order-details.webp" width="1000" height="600" alt="order details screen"/>
+        <figcaption>Once an order is placed, the system provides all of the information in a single location, the customer can access the order details, delivery information, technical documents, and also edit, cancel or reorder.</figcaption>
+      </figure>
+        <h2>Order Cancellation and permanent actions</h2>
+
+        <p>When dealing with actions that have permanent effects, such as order cancellations, we provided a dedicated context to minimize mistakes and added an active request.
+          We also used these moments to gather information and improve the business process.
+        </p>
+
+        <div class="gallery two">
+          <figure>
+            <img class="" src="src/img/projects/one-connect/oc-cancelation.webp" width="500" height="250" alt="order cancellation"/>
+          </figure>
+          <figure>
+            <img class="" src="src/img/projects/one-connect/oc-cancelation-reason.webp" width="500" height="250" alt="confirmation of order cancellation"/>
+          </figure>
+          </div>
+
+        <h2>Downloading reports</h2>
+
+        <p>For reports and products, we used category browsing based on a card sorting process, where we grouped products by line and category.</p>
+
+        <div class="gallery two">
+          <figure>
+            <img class="" src="src/img/projects/one-connect/oc-reports.webp" width="500" height="250" alt="navigation with categories"/>
+          </figure>
+          <figure>
+            <img class="" src="src/img/projects/one-connect/oc-reports-list.webp" width="500" height="250" alt="list of reports"/>
+          </figure>
+          </div>
 
       <div class="column title-container">
         <span class="eye">and finally,</span>
         <h2>🎯 The outcomes</h2>
       </div>
 
-      
+      <p>
+        One Connect was a big project, and I enjoyed leading its design. Summarizing over two years of dedicated work is difficult, but I can categorize the results into the following areas:
+      </p>
       <ul class="outcomes">
         <li class="outcome">
-          <span class="outcome-ticker">+2680%</span>  
-          <span class="outcome-title">139</span>
+          <span class="outcome-ticker">+533%</span>  
+          <span class="outcome-title">90M USD</span>
           </span>
-          <p>Applications using the system.</p>
+          <p>Average monthly order net value.
+          </p>
         </li>
 
         <li class="outcome">
-          <span class="outcome-ticker">+153%</span>  
-          <span class="outcome-title">38%</span>
+          <span class="outcome-ticker">+1120%</span>  
+          <span class="outcome-title">1000</span>
           </span>
-          <p>Average delivery efficiency for teams.</p>
+          <p>Monthly active users.</p>
         </li>
 
         <li class="outcome">
-          <span class="outcome-ticker">+140% ROI</span>  
-          <span class="outcome-title">4.8M</span>
+          <span class="outcome-ticker">+183%</span>  
+          <span class="outcome-title">85%</span>
           </span>
-          <p>Million CAD saved per year.</p>
+          <p>of positive feedback.</p>
         </li>
 
-        <li class="outcome">
-          <span class="outcome-ticker">+43%</span>  
-          <span class="outcome-title">86</span>
+        <li class="outcome feedback">
+          <span class="outcome-ticker">customer feedback</span>  
           </span>
-          <p>Working components delivered.</p>
+          <p><i>"OneConnect is a huge improvement compared to the previous tool, it is lighter, faster, and more friendly. I was able to place all my orders."</i>
+            <b>Logistics Coordinator - 2020</b>
+          </p>
         </li>
 
-        <li class="outcome">
-          <span class="outcome-ticker">+67% </span>  
-          <span class="outcome-title">500+</span>
+        <li class="outcome feedback">
+          <span class="outcome-ticker">customer feedback</span>  
           </span>
-          <p>Developers and designers using the system.</p>
+          <p><i>"I think OneConnect is much easier and customer-friendly compared to the previous tool, so I am very happy with it"</i>
+            <b>Distributor - 2020</b> 
+          </p>
+        </li>
+
+        <li class="outcome feedback">
+          <span class="outcome-ticker">customer feedback</span>  
+          </span>
+          <p><i>"I think OneConnect is much easier and customer-friendly compared to the previous tool, so I am very happy with it"</i>
+            <b>Distributor - 2020</b>
+          </p>
         </li>
       </ul>
 
-        <a class="button-view-product" href="https://telus.github.io/universal-design-system/" target="_blank">
+        <a class="button-view-product" href="https://www.exxonmobilchemical.com/en/resources/online-customer-service" target="_blank">
           See the product live
           <svg viewBox="0 0 72 72"><path d="M64 64H8V8h28V0H8a8 8 0 0 0-8 8v56a8 8 0 0 0 8 8h56c4.4 0 8-3.6 8-8V36h-8v28ZM44 0v8h14.36L19.04 47.32l5.64 5.64L64 13.64V28h8V0H44Z"/></svg>
         </a>
 
     <div class="row even">
       
-      <div class="previous">
+      <a class="previous" href="universal-design-system.html">
         <span class="read">
           previous
         </span>
         <span>
-          article name
+          Universal Design System
         </span>
-      </div>
+      </a>
 
-      <div class="next">
+      <a class="next" href="emcc-design-system.html">
         <span class="read">
           next
         </span>
         <span>
-          article name
+          ExxonMobil Design System
         </span>
-      </div>
+      </a>
   </div>
 
     </section>

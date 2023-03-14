@@ -51,6 +51,24 @@ figcaption{
     opacity: 0.8;
 }
 
+.gallery{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: center;
+}
+
+.gallery > figure> img:active, .gallery > figure > img:hover {
+    z-index: 300;
+    transition:transform 0.25s ease;
+    -webkit-transform:scale(1.75);
+    transform:scale(1.75);
+}
+
+.two > *{
+    width: 45%;
+}
+
 .welcome-section {
     padding-bottom:1rem;
   }
@@ -82,17 +100,22 @@ figcaption{
 }
 
 .next, .previous{
-    align-items: end;
     display: flex;
     flex-direction: column;
-    align-items: end;
     padding: 0.5rem 1rem;
     color: var(--purple);
     margin-bottom: 1rem;
 }
 
-.next:hover, .previous:hover{
+.next{
     align-items: end;
+}
+
+.previous{
+    align-items: start;
+}
+
+.next:hover, .previous:hover{
     color: var(--light-gray);
     background-color: var(--purple-dark);
     cursor: pointer;
@@ -104,9 +127,7 @@ figcaption{
     color: var(--light-gray);
 }
 
-.previous{
-    align-items: start;
-}
+
 
 .even{
     border-top: 1px solid var(--grey1);
@@ -193,7 +214,19 @@ figcaption{
     padding: 2rem;
     align-content: stretch;
     flex-grow: 5;
+}
 
+.feedback{
+    width: 30%;
+    gap:1rem;
+    flex-grow: 1;
+    flex-shrink: 10;
+    margin: 0;
+}
+
+
+.feedback > p{
+    margin: 0
 }
 
 .outcome-title{
@@ -252,5 +285,18 @@ footer > p {
     fill: var(--light-gray);;
   }
 
+  table{
+    width: 90%;
+    margin: 2rem 0;
+  }
 
-  
+  thead > tr > th{
+    background-color: var(--purple-dark);
+    padding: 1rem 1rem;
+    border-radius: 4px;
+  }
+
+  td{
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid var(--grey-inactive);
+  }
