@@ -475,7 +475,46 @@
   footer i {
     vertical-align: middle;
   }
+
+  #mobile-message{
+    width: 100%;
+    height: 100%;
+    background-color: var(--purple-dark);
+    position:fixed;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3rem !important; 
+    padding:30vh 30vw;
+    gap: 2rem;
+    text-align: center;
+    justify-content: space-evenly;
+
+  }
+
+  #mobile-message > button{
+    color: var(--light-gray);
+    padding: 0.75rem 2.5rem;
+    border-radius: 36px;
+    cursor: pointer;
+    border: 4px solid var(--light-gray);
+    background-color: var(--purple-dark);
+    font-size: 24px;
+  }
+
+  #mobile-message > button:active{
+    color: var(--purple-dark);
+    background-color: var(--purple);
+    border: 4px solid var(--light-gray);
+  }
   
+  @media (min-width: 400px) {
+    #mobile-message{
+      display: none;
+    }
+  }
+
   @media (max-width: 28.75em) {
     footer {
       flex-direction: column;
