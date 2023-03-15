@@ -5,7 +5,7 @@
     <title> John Nadal Portfolio - Universal Design System</title>
     <link rel="stylesheet" href="src/css/styles.css" type="text/css">
     <link rel="stylesheet" href="src/css/work.css" type="text/css">
-    <meta name="description" content="Work example on what was done for TELUS at Universal Design System Product">
+    <meta name="description" content="Videnci - DS - Work example on what was done for Videnci at the internal design system">
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -53,152 +53,92 @@
   <section id="welcome-section" class="welcome-section">
     <div class="hero">
       <h1>
-        Re-defining design systems at TELUS with Universal Design System
+        Final Price BC a concept app to help newcomers
       </h1>
-      <img class="cover" src="src/img/covers/uds.png" width="600" height="600" alt="cover with project image"/>
+      <img class="cover" src="src/img/covers/final-price.webp" width="600" height="600" alt="cover with project image"/>
     </div>
   </section>
 
   <section>
     <div class="row row-left logo-align">
-    <img class="logo" src="src/img/projects/universal-design-system/telus-logo.svg" width="200" height="100" alt="cover with project image"/>
-    2022 - 2023
+    2021
     </div>
 
     <div class="column title-container">
       <span class="eye">Company / Product</span>
-      <h2>TELUS is a leading Telecom company in Canada aiming for more consistency across its digital experiences.</h2>
+      <h2>The app was created as a personal challenge to find a practical solution to a real problem. The goal was to complete the project within a deadline of two days.</h2>
     </div>
 
-    <p>TELUS had already created Design Systems, but only for a single brand's websites.
-      As the design knowledge grew, they wanted a system that could cover more products and support an omnichannel business model.
-      To accomplish this, they created the Universal Design System (UDS) in late 2019. The goal was to have one library for all TELUS brands (including Koodo and Public Mobile) on any platform (Android, iOS, and Web).
-      This would allow for consistency in guidelines, standards, styles, and components.</p>
-      
-    <p>The intention was good and the idea had lots of potential, however, some practical aspects were not fully considered, confusing the product's direction. After two years of struggles
-        and low adoption rates, new members were onboarded and we were allowed to re-assess UDS and help the company.</p>
-      
-    <div class="highlight">
-      <span class="highlight-title">The challenge</span>
-      <p>While UDS was a powerful product, it suffered from unnecessary complexity and difficulty in maintenance, leading to people not understanding how to use it, hence not using it.
-        As a result, I reviewed the product vision and strategy, and rallied the team to shift their focus towards providing a more user-friendly platform for our customers.</p>
-    </div>
+    <p>When you immigrate to a new country there are a lot of differences and adaptation takes time.
+      One common issue that appeared over conversations was that on Canada the price tags do not show the end price
+      (tags only show the sale price and taxes are applied on top of it) where in Brazil the tags present the sales price and all taxes included.</p>
 
-    <p>To simplify UDS, we talked to designers and developers at TELUS delivery teams to understand what they needed and wanted.
-      Based on their feedback, we improved the developer experience by making documentation easily accessible and providing regular updates on component use.
-      We also created an open Slack community for anyone interested in learning more about UDS.</p>
+      <h3>Understanding the issue</h3>
 
-    <p>Next, we gathered input from each brand design team to understand their goals and current offerings. We found that each brand was going in its own direction focused only on designing screens on Figma
-      without considering their feasibility or best practices</p>
+    <p>After noticing that, I realized this could be an interesting topic and maybe something fun to work at. But how could I Understand the issue and a propose something on only two days? The path chosen was to apply Lean UX and Guerrilla research. I decided to talk to three newcomers and see if the experiences and issues were similar.</p>
 
-    <p>To structure the system, we focused on "base components," reusable code snippets that could be branded using two data layers: "palettes" and "themes."
-      Each brand was given a palette and a theme, with the brand palette containing design tokens to represent brand identity, and the themes serving as the interfaces between the palettes and the components.
-      In other words, the palettes contained design options, and the themes represented the design decisions for each component.</p>
+    <p>Having the timeline in mind I could not waste time, so I jumped into the conversations, or should I say a “Coffee time” with the people I new from the newcomer community at Vancouver. The main insights learned from these talks were that “before sales tax were already given”, “sometimes there are surprises at the end price of a purchase and I need to reprioritize my weekly budget”, “Most of things are purchased with cash” and they went physically to the stores.</p>
 
     <figure>
-    <img class="" src="src/img/projects/universal-design-system/palette.svg" width="1000" height="150" alt="examples of tokens"/>
-    <figcaption>Example of token categories defined for palettes</figcaption>
+      <img class="" src="src/img/projects/final-price/notes.webp" width="1000" height="100" alt="summary audit"/>
+      <figcaption>Listen, note, ask and validate</figcaption>
     </figure>
 
-    <p>We started by reviewing the 60 existing components and defining their states, interactions, properties, and variants.
-      This helped us understand what each component should and should not do, and we enforced a common structure and rules across all brands.
-      We repeated this process for the 26 new components we created. Let's take the button component as an example.</p>
+    <p>Now thinking that the major concern was financial and the second security (carrying bills / not being able to purchase goods) the next setp would be to understand and validate the type of interaction and journey.</p>
 
     <figure>
-    <img class="" src="src/img/projects/universal-design-system/telus-button.png" width="800" height="300" alt="example of TELUS button component"/>
-    <figcaption>Structure for the buttons component, states, and variants (size, priority, danger). </figcaption>
+      <img class="" src="src/img/projects/final-price/persona.webp" width="1000" height="100" alt="summary audit"/>
+      <figcaption>Proto-persona: who is the newcomer, what they worry about.</figcaption>
     </figure>
-
-    <p>To design the buttons component, we analyzed the problems the community was trying to solve with it to defined its structure, requirements, and specifications.
-      After several cycles, we decided the button could be customized using the following tokens: <i>alignSelf, backgroundColor, borderColor, borderRadius, borderRadius, borderWidth, color, fontName, fontSize, fontWeight, icon, iconSize, iconSpace, lineHeight, minWidth, opacity, outerBackgroundColor, outerBorderColor, outerBorderGap, outerBorderWidth, paddingBottom, paddingLeft, paddingRight, paddingTop, shadow, textAlign, textLine, textLineStyle and width.</i>
-      
-      We also defined interaction states, rules depending on the platform, and variants like <i>Default, Hover, Pressed, Focus, Focus and Pressed, Inactive, danger </i>(for destructive patterns that lead to loss of information), <i>inverse</i> (for darker backgrounds), <i>priority</i> (to define visual hierarchy of interactions), <i>size</i> (to control the size of the label and button) and <i>width</i> for full-width use-cases.</p>
-
-    <p>With these tokens and variables defined, we were able to discuss themes and palettes with the brands. We defined a shared naming convention and rules so teams working across brands could create multi-brand experiences without surprises. Brands could customize existing the components based on the available tokens or request new ones to further customize the component.</p>
 
     <figure>
-      <img src="src/img/projects/universal-design-system/multi-brand-buttons.png" width="800" height="150" alt="Multi-brand buttons"/>
-      <figcaption>Structure for the buttons component, states, and variants (size, priority, danger). </figcaption>
+      <img class="" src="src/img/projects/final-price/journey_map.webp" width="1000" height="100" alt="summary audit"/>
+      <figcaption>Lean journey map. The critical path for completing their tasks.</figcaption>
     </figure>
-    
+
+    <p>After a second round of discussion (this time via WhatsApp), I discovered that most people go shopping with a smartphone, used both for the list as for communicating with relatives at home. The stores they go are mostly closed spaces (limited natural lightning) and the majority of devices were iPhones.</p>
 
     <div class="column title-container">
-      <span class="eye">Taking a step further</span>
-      <h2>🙋🏻‍♂️ Community contribution</h2>
+      <span class="eye">figuring it out</span>
+      <h2>The solution</h2>
     </div>
 
-    <p>The proposed changes and standardization were successful, but the team of 8 people couldn't maintain all the standards for every brand and support any new brand needs. The solution was to invite community contribution.</p>
+    <p>With the previous insight in mind, my goal was to come up with a way to inform folks what would be the total price of a good or the end price of a purchase (Sales + taxes), this way they would be able to make better choices and have some level of help on the initial moments as newcomers.</p>
+    <p>Understand taxes was also important, after a bit of desk research, I used cardsorting to come. up with categories that would cover different tax brackets combinations from federal and provincial levels. (my main reference was the government website)</p>
+    <figure>
+      <img class="" src="src/img/projects/final-price/notes.webp" width="1000" height="100" alt="notes"/>
+      <figcaption>Sketches on how the solution could work (sorry, my handwriting is encripted)</figcaption>
+    </figure>
+    <p>Given devices were iPhones the way to go was to think on an iOS service so I used patterns from HiG to ensure familiarity with the interaction patterns and the context they are when doing groceries, I opted by a dark theme, so it would not only be better to view but also help save battery that could be needed during the commute.</p>
+    <figure>
+      <img class="" src="src/img/projects/final-price/landing.webp" width="1000" height="100" alt="landing page"/>
+    </figure>
+    <p>The full range of screens can be viewed below:</p>
+    <figure>
+      <img class="" src="src/img/projects/final-price/app-screens.webp" width="1000" height="100" alt="screens"/>
+    </figure>
 
-    <p>Instead of having one team responsible for all component changes, the core team would support the base components, palettes, and themes for TELUS, Koodo, and Public Mobile.
-      Other teams could contribute specific components or extend themes for brand-specific variants. They could even request a new theme or palette for a specific need.</p>
+    <p>The idea is pretty simple, the user would access the app and either set up a grocery list, similar to a To-Do list where they would be able to copy and use it recurrently or go straight to the calculation using the camera to recognize the price on a given tag. As an edge case, if the camera is not able to recognize the value, the user can manually input the price for the app to calculate the final price (hence the name, Final Price). By changing the category the app would take it in consideration and apply the proper taxes resulting on a new value.</p>
+    
+    <div class="column title-container">
+      <span class="eye">and finally,</span>
+      <h2>🎯 The outcomes</h2>
+    </div>
 
-      <div class="column title-container">
-        <span class="eye">and finally,</span>
-        <h2>🎯 The outcomes</h2>
-      </div>
-
+    <p>Since this is a concept there are no quantitative results, only qualitative feedback where people were able to use and perceived as “Straightforward” and ”simple yet elegant”.</p>
+    <p>Paths forward on this concept could be to translate it into an hybrid app or conceive a similar android app to broaden user base, conceive a browser extension for online shopping and further on collect usage data to present lowest prices and location for users.</p>
       
-      <ul class="outcomes">
-        <li class="outcome">
-          <span class="outcome-ticker">+2680%</span>  
-          <span class="outcome-title">139</span>
-          </span>
-          <p>Applications using the system.</p>
-        </li>
 
-        <li class="outcome">
-          <span class="outcome-ticker">+153%</span>  
-          <span class="outcome-title">38%</span>
-          </span>
-          <p>Average delivery efficiency for teams.</p>
-        </li>
-
-        <li class="outcome">
-          <span class="outcome-ticker">+140% ROI</span>  
-          <span class="outcome-title">4.8M</span>
-          </span>
-          <p>Million CAD saved per year.</p>
-        </li>
-
-        <li class="outcome">
-          <span class="outcome-ticker">+43%</span>  
-          <span class="outcome-title">86</span>
-          </span>
-          <p>Working components delivered.</p>
-        </li>
-
-        <li class="outcome">
-          <span class="outcome-ticker">+67% </span>  
-          <span class="outcome-title">500+</span>
-          </span>
-          <p>Developers and designers using the system.</p>
-        </li>
-      </ul>
-
-        <a class="button-view-product" href="https://telus.github.io/universal-design-system/" target="_blank">
-          See the product live
-          <svg viewBox="0 0 72 72"><path d="M64 64H8V8h28V0H8a8 8 0 0 0-8 8v56a8 8 0 0 0 8 8h56c4.4 0 8-3.6 8-8V36h-8v28ZM44 0v8h14.36L19.04 47.32l5.64 5.64L64 13.64V28h8V0H44Z"/></svg>
-        </a>
-
-    <div class="row even">
-      
-      <div class="previous">
+    <div class="row even single-previous">
+  
+      <a class="next" href="videnci-design-system.html">
         <span class="read">
           previous
         </span>
         <span>
-          article name
+          Videnci Design System
         </span>
-      </div>
-
-      <div class="next">
-        <span class="read">
-          next
-        </span>
-        <span>
-          article name
-        </span>
-      </div>
+      </a>
   </div>
 
     </section>
