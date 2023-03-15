@@ -335,27 +335,19 @@
   }
 
   .card--3 .card__img, .card--3 .card__img--hover {
-    background-image: url("https://jhnadal.github.io/portfolio/src/img/covers/uds.png");
+    background-image: url("https://jhnadal.github.io/portfolio/src/img/covers/casys.webp");
 }
 
 .card--4 .card__img, .card--4 .card__img--hover {
-  background-image: url("https://jhnadal.github.io/portfolio/src/img/covers/uds.png");
+  background-image: url("https://jhnadal.github.io/portfolio/src/img/covers/oc.webp");
 }
 
 .card--5 .card__img, .card--5 .card__img--hover {
-  background-image: url("https://jhnadal.github.io/portfolio/src/img/covers/uds.png");
+  background-image: url("https://jhnadal.github.io/portfolio/src/img/covers/oc.webp");
 }
 
 .card--6 .card__img, .card--6 .card__img--hover {
-  background-image: url("https://jhnadal.github.io/portfolio/src/img/covers/uds.png");
-}
-
-.card--7 .card__img, .card--7 .card__img--hover {
-  background-image: url("https://jhnadal.github.io/portfolio/src/img/covers/uds.png");
-}
-
-.card--8 .card__img, .card--8 .card__img--hover {
-  background-image: url("https://jhnadal.github.io/portfolio/src/img/covers/UDS.png");
+  background-image: url("https://jhnadal.github.io/portfolio/src/img/covers/oc.webp");
 }
 
   .card__clock {
