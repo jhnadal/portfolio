@@ -5,7 +5,7 @@
     <title> John Nadal Portfolio - Universal Design System</title>
     <link rel="stylesheet" href="src/css/styles.css" type="text/css">
     <link rel="stylesheet" href="src/css/work.css" type="text/css">
-    <meta name="description" content="Work example on what was done for TELUS at Universal Design System Product">
+    <meta name="description" content="Videnci - DS - Work example on what was done for Videnci at the internal design system">
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -53,7 +53,7 @@
   <section id="welcome-section" class="welcome-section">
     <div class="hero">
       <h1>
-        Re-defining design systems at TELUS with Universal Design System
+        Auditing Videnci's UI and creating a new design system
       </h1>
       <img class="cover" src="src/img/covers/uds.png" width="600" height="600" alt="cover with project image"/>
     </div>
@@ -61,144 +61,152 @@
 
   <section>
     <div class="row row-left logo-align">
-    <img class="logo" src="src/img/projects/universal-design-system/telus-logo.svg" width="200" height="100" alt="cover with project image"/>
-    2022 - 2023
+    <img class="logo" src="src/img/projects/videnci/videnci-logo.png" width="200" height="100" alt="videnci logo"/>
+    2021
     </div>
 
     <div class="column title-container">
       <span class="eye">Company / Product</span>
-      <h2>TELUS is a leading Telecom company in Canada aiming for more consistency across its digital experiences.</h2>
+      <h2>Videnci is a Brazilian startup that offers B2B SaaS solutions to automate work routines by migrating checklists and workflows from paper to the cloud.</h2>
     </div>
 
-    <p>TELUS had already created Design Systems, but only for a single brand's websites.
-      As the design knowledge grew, they wanted a system that could cover more products and support an omnichannel business model.
-      To accomplish this, they created the Universal Design System (UDS) in late 2019. The goal was to have one library for all TELUS brands (including Koodo and Public Mobile) on any platform (Android, iOS, and Web).
-      This would allow for consistency in guidelines, standards, styles, and components.</p>
-      
-    <p>The intention was good and the idea had lots of potential, however, some practical aspects were not fully considered, confusing the product's direction. After two years of struggles
-        and low adoption rates, new members were onboarded and we were allowed to re-assess UDS and help the company.</p>
-      
-    <div class="highlight">
-      <span class="highlight-title">The challenge</span>
-      <p>While UDS was a powerful product, it suffered from unnecessary complexity and difficulty in maintenance, leading to people not understanding how to use it, hence not using it.
-        As a result, I reviewed the product vision and strategy, and rallied the team to shift their focus towards providing a more user-friendly platform for our customers.</p>
-    </div>
+    <p>As a product and design manager at Videnci, my goal was to optimize my team's performance and minimize their workload.
+      I proposed a unified ecosystem of component libraries that were coded based on design semantics and centralized style management.
+      This would simplify the design process and reduce refactoring work for both designers and developers by breaking it down into smaller components.</p>
 
-    <p>To simplify UDS, we talked to designers and developers at TELUS delivery teams to understand what they needed and wanted.
-      Based on their feedback, we improved the developer experience by making documentation easily accessible and providing regular updates on component use.
-      We also created an open Slack community for anyone interested in learning more about UDS.</p>
+    <p>Before, the company prioritized graphic design over maintenance and usability, resulting in inconsistencies throughout the products and site.
+      There were redundancies in styles, misuse of components, and miscommunication between design mockups and Vuetify's components.
+      In total, there were over 750 CSS files, including frameworks, custom, and imported files. Below is a quick analysis of the main file.</p>
 
-    <p>Next, we gathered input from each brand design team to understand their goals and current offerings. We found that each brand was going in its own direction focused only on designing screens on Figma
-      without considering their feasibility or best practices</p>
-
-    <p>To structure the system, we focused on "base components," reusable code snippets that could be branded using two data layers: "palettes" and "themes."
-      Each brand was given a palette and a theme, with the brand palette containing design tokens to represent brand identity, and the themes serving as the interfaces between the palettes and the components.
-      In other words, the palettes contained design options, and the themes represented the design decisions for each component.</p>
+    <h3>Analysis results of the main CSS file</h3>
 
     <figure>
-    <img class="" src="src/img/projects/universal-design-system/palette.svg" width="1000" height="150" alt="examples of tokens"/>
-    <figcaption>Example of token categories defined for palettes</figcaption>
+      <img class="" src="src/img/projects/videnci/ds/audit-summary.webp" width="1000" height="100" alt="summary audit"/>
+      <figcaption>After miniification, the main file was around 900kb in size.</figcaption>
     </figure>
-
-    <p>We started by reviewing the 60 existing components and defining their states, interactions, properties, and variants.
-      This helped us understand what each component should and should not do, and we enforced a common structure and rules across all brands.
-      We repeated this process for the 26 new components we created. Let's take the button component as an example.</p>
 
     <figure>
-    <img class="" src="src/img/projects/universal-design-system/telus-button.png" width="800" height="300" alt="example of TELUS button component"/>
-    <figcaption>Structure for the buttons component, states, and variants (size, priority, danger). </figcaption>
+      <img class="" src="src/img/projects/videnci/ds/audit-colors.webp" width="1000" height="100" alt="audit colors"/>
+      <figcaption>2309 color callings on the main CSS</figcaption>
     </figure>
-
-    <p>To design the buttons component, we analyzed the problems the community was trying to solve with it to defined its structure, requirements, and specifications.
-      After several cycles, we decided the button could be customized using the following tokens: <i>alignSelf, backgroundColor, borderColor, borderRadius, borderRadius, borderWidth, color, fontName, fontSize, fontWeight, icon, iconSize, iconSpace, lineHeight, minWidth, opacity, outerBackgroundColor, outerBorderColor, outerBorderGap, outerBorderWidth, paddingBottom, paddingLeft, paddingRight, paddingTop, shadow, textAlign, textLine, textLineStyle and width.</i>
-      
-      We also defined interaction states, rules depending on the platform, and variants like <i>Default, Hover, Pressed, Focus, Focus and Pressed, Inactive, danger </i>(for destructive patterns that lead to loss of information), <i>inverse</i> (for darker backgrounds), <i>priority</i> (to define visual hierarchy of interactions), <i>size</i> (to control the size of the label and button) and <i>width</i> for full-width use-cases.</p>
-
-    <p>With these tokens and variables defined, we were able to discuss themes and palettes with the brands. We defined a shared naming convention and rules so teams working across brands could create multi-brand experiences without surprises. Brands could customize existing the components based on the available tokens or request new ones to further customize the component.</p>
 
     <figure>
-      <img src="src/img/projects/universal-design-system/multi-brand-buttons.png" width="800" height="150" alt="Multi-brand buttons"/>
-      <figcaption>Structure for the buttons component, states, and variants (size, priority, danger). </figcaption>
+      <img class="" src="src/img/projects/videnci/ds/audit-fonts.webp" width="1000" height="100" alt="audit typography"/>
+      <figcaption>Almost 300 callings for fonts, not considering external imports. Usage of different sizing standards. 109 font family callings, not considering external imports.</figcaption>
     </figure>
-    
+
+    <figure>
+      <img class="" src="src/img/projects/videnci/ds/audit-box.webp" width="1000" height="100" alt="audit shadow"/>
+      <figcaption>Over 180 box-shadow definitions, using RGBA, color codes and Hex.</figcaption>
+    </figure>
+
+    <figure>
+      <img class="" src="src/img/projects/videnci/ds/audit-z-index.webp" width="1000" height="100" alt="audit z-index"/>
+      <figcaption>79 Z-indexes definition to help with content sorting.</figcaption>
+    </figure>
+
+    <p>In summary, each developer had created their own set of rules for each snippet they had worked on over the years.</p>
 
     <div class="column title-container">
-      <span class="eye">Taking a step further</span>
-      <h2>🙋🏻‍♂️ Community contribution</h2>
+      <span class="eye">figuring it out</span>
+      <h2>The solution</h2>
     </div>
 
-    <p>The proposed changes and standardization were successful, but the team of 8 people couldn't maintain all the standards for every brand and support any new brand needs. The solution was to invite community contribution.</p>
+    <p>I wish I could say there was a simple solution to mitigate over three years of accumulated technical debt. In our case, we chose to start implementing best practices on upcoming releases of the dev team, start a style sanitization and componentization on the design team.</p>
 
-    <p>Instead of having one team responsible for all component changes, the core team would support the base components, palettes, and themes for TELUS, Koodo, and Public Mobile.
-      Other teams could contribute specific components or extend themes for brand-specific variants. They could even request a new theme or palette for a specific need.</p>
+    <p>To ensure alignment between deliverables from different designers, I enforced a centralized library, we ran design reviews for each new token and component to be sure those could be applied on different contexts. This style of management generated an initial overhead but it scaled very fast, in less than two months all designers were using the shared components, and delivery to dev was fluid, around a day for each task.</p>
+      
+    <figure>
+      <img class="" src="src/img/projects/videnci/ds/diagram.webp" width="600" height="150" alt="tokens diagram"/>
+      <figcaption>Example of token categories defined for palettes</figcaption>
+    </figure>
+    
+    <p>We had two main libraries to maintain, a Vuetify one for the Vue hybrid app and another in plain CSS for the WordPress-based website. The plan was to have a single JSON library and use Salesforce's Theo for transpiling the styles for each platform, but this part was not implemented.</p>
 
-      <div class="column title-container">
-        <span class="eye">and finally,</span>
-        <h2>🎯 The outcomes</h2>
-      </div>
+    <p>By thinking on an agnostic system that used an inheritance model between tokens, components, team components, and system components, we were able to simplify exponentially our front-ends. This refactoring of our structure allowed the designers to spend less time on Figma and more time understanding the needs of our customers and developers to spend less time tracking and applying changes and focusing on more engineering quality.</p>
+
+    <figure>
+      <img class="" src="src/img/projects/videnci/ds/typography.webp" width="1000" height="150" alt="typography"/>
+      <figcaption>Example of token categories defined for palettes</figcaption>
+    </figure>
+
+    <figure>
+      <img class="" src="src/img/projects/videnci/ds/colorgraphy.webp" width="1000" height="150" alt="typography"/>
+      <figcaption>Example of token categories defined for palettes</figcaption>
+    </figure>
+
+    <figure>
+      <img class="" src="src/img/projects/videnci/ds/spacing.webp" width="1000" height="150" alt="typography"/>
+      <figcaption>Example of token categories defined for palettes</figcaption>
+    </figure>
+
+    <figure>
+      <img class="" src="src/img/projects/videnci/ds/buttons.webp" width="1000" height="150" alt="typography"/>
+      <figcaption>Example of token categories defined for palettes</figcaption>
+    </figure>
+
+    <div class="column title-container">
+      <span class="eye">and finally,</span>
+      <h2>🎯 The outcomes</h2>
+    </div>
 
       
-      <ul class="outcomes">
-        <li class="outcome">
-          <span class="outcome-ticker">+2680%</span>  
-          <span class="outcome-title">139</span>
-          </span>
-          <p>Applications using the system.</p>
-        </li>
+    <ul class="outcomes">
+      <li class="outcome">
+        <span class="outcome-ticker">-93%</span>  
+        <span class="outcome-title">1 day</span>
+        </span>
+        <p>Average cycle time of design item.</p>
+      </li>
 
-        <li class="outcome">
-          <span class="outcome-ticker">+153%</span>  
-          <span class="outcome-title">38%</span>
-          </span>
-          <p>Average delivery efficiency for teams.</p>
-        </li>
+      <li class="outcome">
+        <span class="outcome-ticker">-86%</span>  
+        <span class="outcome-title">2 days</span>
+        </span>
+        <p>Average cycle time of development item.</p>
+      </li>
 
-        <li class="outcome">
-          <span class="outcome-ticker">+140% ROI</span>  
-          <span class="outcome-title">4.8M</span>
-          </span>
-          <p>Million CAD saved per year.</p>
-        </li>
+      <li class="outcome">
+        <span class="outcome-ticker">-98%</span>  
+        <span class="outcome-title">3</span>
+        </span>
+        <p>font-family calls (down from 109)</p>
+      </li>
 
-        <li class="outcome">
-          <span class="outcome-ticker">+43%</span>  
-          <span class="outcome-title">86</span>
-          </span>
-          <p>Working components delivered.</p>
-        </li>
+      <li class="outcome">
+        <span class="outcome-ticker">-97%</span>  
+        <span class="outcome-title">7</span>
+        </span>
+        <p>font-size definitions (down from 291)</p>
+      </li>
 
-        <li class="outcome">
-          <span class="outcome-ticker">+67% </span>  
-          <span class="outcome-title">500+</span>
-          </span>
-          <p>Developers and designers using the system.</p>
-        </li>
-      </ul>
-
-        <a class="button-view-product" href="https://telus.github.io/universal-design-system/" target="_blank">
-          See the product live
-          <svg viewBox="0 0 72 72"><path d="M64 64H8V8h28V0H8a8 8 0 0 0-8 8v56a8 8 0 0 0 8 8h56c4.4 0 8-3.6 8-8V36h-8v28ZM44 0v8h14.36L19.04 47.32l5.64 5.64L64 13.64V28h8V0H44Z"/></svg>
-        </a>
+      <li class="outcome">
+        <span class="outcome-ticker">-89%</span>  
+        <span class="outcome-title">34</span>
+        </span>
+        <p>Color rules (down from 405)</p>
+      </li>
+    </ul>
 
     <div class="row even">
-      
-      <div class="previous">
+  
+      <a class="previous" href="videnci.html">
         <span class="read">
           previous
         </span>
         <span>
-          article name
+          Growing a SaaS Startup
         </span>
-      </div>
+      </a>
 
-      <div class="next">
+      <a class="next" href="final-price.html">
         <span class="read">
           next
         </span>
         <span>
-          article name
+          Concept app for newcomers
         </span>
-      </div>
+      </a>
   </div>
 
     </section>
