@@ -5,7 +5,7 @@
     <title> John Nadal Portfolio - Universal Design System</title>
     <link rel="stylesheet" href="src/css/styles.css" type="text/css">
     <link rel="stylesheet" href="src/css/work.css" type="text/css">
-    <meta name="description" content="Work example on what was done for TELUS at Universal Design System Product">
+    <meta name="description" content="Videnci - Sign up - Work example on what was done for Videnci">
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -53,153 +53,96 @@
   <section id="welcome-section" class="welcome-section">
     <div class="hero">
       <h1>
-        Re-defining design systems at TELUS with Universal Design System
+        Growing a SaaS Startup by improving the sign up flow
       </h1>
-      <img class="cover" src="src/img/covers/uds.png" width="600" height="600" alt="cover with project image"/>
+      <img class="cover" src="src/img/covers/videnci.webp" width="600" height="600" alt="cover with project image"/>
     </div>
   </section>
 
   <section>
     <div class="row row-left logo-align">
-    <img class="logo" src="src/img/projects/universal-design-system/telus-logo.svg" width="200" height="100" alt="cover with project image"/>
+    <img class="logo" src="src/img/projects/videnci/videnci-logo.png" width="200" height="100" alt="videnci logo"/>
     2022 - 2023
     </div>
 
     <div class="column title-container">
       <span class="eye">Company / Product</span>
-      <h2>TELUS is a leading Telecom company in Canada aiming for more consistency across its digital experiences.</h2>
+      <h2>Videnci is a Brazilian startup that offers B2B SaaS solutions to automate work routines by migrating checklists and workflows from paper to the cloud.</h2>
     </div>
 
-    <p>TELUS had already created Design Systems, but only for a single brand's websites.
-      As the design knowledge grew, they wanted a system that could cover more products and support an omnichannel business model.
-      To accomplish this, they created the Universal Design System (UDS) in late 2019. The goal was to have one library for all TELUS brands (including Koodo and Public Mobile) on any platform (Android, iOS, and Web).
-      This would allow for consistency in guidelines, standards, styles, and components.</p>
+    <p>The project involved redesigning the company sign-up process to align with the Product-Led Growth (PLG) framework, which prioritizes a straightforward user experience without any internal barriers, allowing customers to complete tasks independently.</p>
       
-    <p>The intention was good and the idea had lots of potential, however, some practical aspects were not fully considered, confusing the product's direction. After two years of struggles
-        and low adoption rates, new members were onboarded and we were allowed to re-assess UDS and help the company.</p>
-      
-    <div class="highlight">
-      <span class="highlight-title">The challenge</span>
-      <p>While UDS was a powerful product, it suffered from unnecessary complexity and difficulty in maintenance, leading to people not understanding how to use it, hence not using it.
-        As a result, I reviewed the product vision and strategy, and rallied the team to shift their focus towards providing a more user-friendly platform for our customers.</p>
-    </div>
-
-    <p>To simplify UDS, we talked to designers and developers at TELUS delivery teams to understand what they needed and wanted.
-      Based on their feedback, we improved the developer experience by making documentation easily accessible and providing regular updates on component use.
-      We also created an open Slack community for anyone interested in learning more about UDS.</p>
-
-    <p>Next, we gathered input from each brand design team to understand their goals and current offerings. We found that each brand was going in its own direction focused only on designing screens on Figma
-      without considering their feasibility or best practices</p>
-
-    <p>To structure the system, we focused on "base components," reusable code snippets that could be branded using two data layers: "palettes" and "themes."
-      Each brand was given a palette and a theme, with the brand palette containing design tokens to represent brand identity, and the themes serving as the interfaces between the palettes and the components.
-      In other words, the palettes contained design options, and the themes represented the design decisions for each component.</p>
+    <p>The original sign-up flow for Videnci required users to complete 12 separate screens to provide excessive information about their company. Error messages were unclear, and validation only occurred on the final screen, requiring users to manually backtrack to correct mistakes. The process took an average of 5 minutes to complete and had a low success rate of 7.69%, leading many potential customers to abandon the page due to the cumbersome experience.</p>
 
     <figure>
-    <img class="" src="src/img/projects/universal-design-system/palette.svg" width="1000" height="150" alt="examples of tokens"/>
-    <figcaption>Example of token categories defined for palettes</figcaption>
+      <img class="" src="src/img/projects/videnci/old-flow.webp" width="1000" height="650" alt="screens of the previous flow"/>
+      <figcaption>Example of token categories defined for palettes</figcaption>
     </figure>
 
-    <p>We started by reviewing the 60 existing components and defining their states, interactions, properties, and variants.
-      This helped us understand what each component should and should not do, and we enforced a common structure and rules across all brands.
-      We repeated this process for the 26 new components we created. Let's take the button component as an example.</p>
+    <h3>Improvement points</h3>
 
-    <figure>
-    <img class="" src="src/img/projects/universal-design-system/telus-button.png" width="800" height="300" alt="example of TELUS button component"/>
-    <figcaption>Structure for the buttons component, states, and variants (size, priority, danger). </figcaption>
-    </figure>
+    <p>We started by reviewing which fields the sales team used and eliminated any unnecessary information.
+      We asked critical questions like why is each input there, what value does it bring, and is there an alternative way to get this information.
+      After this analysis, we removed personal information and narrowed down to only essential fields: company name, segment, number of employees,
+      customer name, phone number, and email address. We also simplified the options for segment and number of employees.
+      Our design team reduced the number of screens from 12 to 2, making it easier for customers to provide information about their company and contact details.</p>
 
-    <p>To design the buttons component, we analyzed the problems the community was trying to solve with it to defined its structure, requirements, and specifications.
-      After several cycles, we decided the button could be customized using the following tokens: <i>alignSelf, backgroundColor, borderColor, borderRadius, borderRadius, borderWidth, color, fontName, fontSize, fontWeight, icon, iconSize, iconSpace, lineHeight, minWidth, opacity, outerBackgroundColor, outerBorderColor, outerBorderGap, outerBorderWidth, paddingBottom, paddingLeft, paddingRight, paddingTop, shadow, textAlign, textLine, textLineStyle and width.</i>
+      <figure>
+        <img class="" src="src/img/projects/videnci/sign-in.webp" width="1000" height="650" alt="examples of tokens"/>
+        <figcaption>Previous interface to the left and the updated to the right. The UI was updated to be aligned with the branding and growing expectations of the company. Proper typography, color codes, and symbols were applied.</figcaption>
+      </figure>
+
+      <figure>
+        <img class="" src="src/img/projects/videnci/input.webp" width="1000" height="650" alt="examples of tokens"/>
+        <figcaption>The previous form on the left and the new form on the right, simplified by removing password confirmation and adding navigation to the privacy policy, according to digital regulations such as Brazil's LGPD and GDPR.</figcaption>
+      </figure>
       
-      We also defined interaction states, rules depending on the platform, and variants like <i>Default, Hover, Pressed, Focus, Focus and Pressed, Inactive, danger </i>(for destructive patterns that lead to loss of information), <i>inverse</i> (for darker backgrounds), <i>priority</i> (to define visual hierarchy of interactions), <i>size</i> (to control the size of the label and button) and <i>width</i> for full-width use-cases.</p>
-
-    <p>With these tokens and variables defined, we were able to discuss themes and palettes with the brands. We defined a shared naming convention and rules so teams working across brands could create multi-brand experiences without surprises. Brands could customize existing the components based on the available tokens or request new ones to further customize the component.</p>
-
-    <figure>
-      <img src="src/img/projects/universal-design-system/multi-brand-buttons.png" width="800" height="150" alt="Multi-brand buttons"/>
-      <figcaption>Structure for the buttons component, states, and variants (size, priority, danger). </figcaption>
-    </figure>
-    
-
-    <div class="column title-container">
-      <span class="eye">Taking a step further</span>
-      <h2>🙋🏻‍♂️ Community contribution</h2>
-    </div>
-
-    <p>The proposed changes and standardization were successful, but the team of 8 people couldn't maintain all the standards for every brand and support any new brand needs. The solution was to invite community contribution.</p>
-
-    <p>Instead of having one team responsible for all component changes, the core team would support the base components, palettes, and themes for TELUS, Koodo, and Public Mobile.
-      Other teams could contribute specific components or extend themes for brand-specific variants. They could even request a new theme or palette for a specific need.</p>
-
       <div class="column title-container">
         <span class="eye">and finally,</span>
         <h2>🎯 The outcomes</h2>
       </div>
 
-      
       <ul class="outcomes">
         <li class="outcome">
-          <span class="outcome-ticker">+2680%</span>  
-          <span class="outcome-title">139</span>
+          <span class="outcome-ticker">+994%</span>  
+          <span class="outcome-title">81%</span>
           </span>
-          <p>Applications using the system.</p>
+          <p>Of conversion on the sign-up process.</p>
         </li>
 
         <li class="outcome">
-          <span class="outcome-ticker">+153%</span>  
-          <span class="outcome-title">38%</span>
+          <span class="outcome-ticker">-96%</span>  
+          <span class="outcome-title">Less than 10s</span>
           </span>
-          <p>Average delivery efficiency for teams.</p>
-        </li>
-
-        <li class="outcome">
-          <span class="outcome-ticker">+140% ROI</span>  
-          <span class="outcome-title">4.8M</span>
-          </span>
-          <p>Million CAD saved per year.</p>
-        </li>
-
-        <li class="outcome">
-          <span class="outcome-ticker">+43%</span>  
-          <span class="outcome-title">86</span>
-          </span>
-          <p>Working components delivered.</p>
-        </li>
-
-        <li class="outcome">
-          <span class="outcome-ticker">+67% </span>  
-          <span class="outcome-title">500+</span>
-          </span>
-          <p>Developers and designers using the system.</p>
+          <p>Reduced average sign up time from 5 min to 10 seconds. </p>
         </li>
       </ul>
 
-        <a class="button-view-product" href="https://telus.github.io/universal-design-system/" target="_blank">
+        <a class="button-view-product" href="videnci.com" target="_blank">
           See the product live
           <svg viewBox="0 0 72 72"><path d="M64 64H8V8h28V0H8a8 8 0 0 0-8 8v56a8 8 0 0 0 8 8h56c4.4 0 8-3.6 8-8V36h-8v28ZM44 0v8h14.36L19.04 47.32l5.64 5.64L64 13.64V28h8V0H44Z"/></svg>
         </a>
 
-    <div class="row even">
+        <div class="row even">
       
-      <div class="previous">
-        <span class="read">
-          previous
-        </span>
-        <span>
-          article name
-        </span>
+          <a class="previous" href="casys.html">
+            <span class="read">
+              previous
+            </span>
+            <span>
+              ExxonMobil Curitiba Attendance System
+            </span>
+          </a>
+    
+          <a class="next" href="videnci-design-system.html">
+            <span class="read">
+              next
+            </span>
+            <span>
+              Videnci Design System
+            </span>
+          </a>
       </div>
-
-      <div class="next">
-        <span class="read">
-          next
-        </span>
-        <span>
-          article name
-        </span>
-      </div>
-  </div>
 
     </section>
     <footer>
