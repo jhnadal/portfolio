@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <title> John Nadal Portfolio and work interests</title>
     <link rel="stylesheet" href="src/css/styles.css" type="text/css">
     <meta name="description" content="Home - John Nadal Portfolio and work samples">
@@ -19,19 +19,19 @@
 
 <body>
 
-  <div id="mobile-message">
+  <!--<div id="mobile-message">
     This site has not yet been updated to mobile. Sorry for the inconvenience.
     <button onclick="myFunction()">I understand</button>
-  </div>
+  </div> -->
 
-  <nav id="navbar" class="nav">
+  <nav id="navbar" class="nav mobile-hidden">
     <span class="nav-name"> <a href="./">Joao Nadal (John)</a></span>
     <ul class="nav-list">
       <li class="nav-item-active">
         <a href="./">Home</a>
       </li>
-      <li id="work" onmouseover="hoverSubmenu()">
-        <a href="universal-design-system.html">Work</a>
+      <li id="work" onmouseenter="enterSubmenu()" onclick="enterSubmenu()">
+        <a >Work</a>
       </li>
       <li>
         <a href="https://www.linkedin.com/in/joao-nadal/">
@@ -40,8 +40,6 @@
         </a>
         
       </li>
-
-     
       <li>
         <a href="src/joao-nadal-resume.pdf" download>
           Resume
@@ -51,9 +49,9 @@
     </ul>
   </nav>
 
-  <div class="submenu hidden" id="submenuDesk">
+  <div class="submenu hidden mobile-hidden" id="submenuDesk" onmouseleave="exitSubmenu()">
     <ul>
-      <li class="submenu-active">
+      <li>
         <a href="universal-design-system.html">
           Universal Design System
         </a>
@@ -86,7 +84,66 @@
     </ul>
   </div>
 
-  <section id="welcome-section" class="welcome-section" onmouseenter="exitSubmenu()">
+  <nav id="mobile-navbar" class="mobile-nav">
+    <span id="mobile-navbar-header">
+      <span class="mobile-nav-name"> <a href="./">Joao Nadal (John)</a></span>
+      <span id="mobile-nav-menu" onclick="toggleMobileMenu()">Menu</span>
+      <span id="mobile-nav-close" onclick="toggleMobileMenu()" class="hidden">Close</span>
+    </span>
+    <ul class="mobile-nav-list hidden" id="mobile-nav-list">
+      <li class="mobile-nav-item-active">
+        <a href="./">Home</a>
+      </li>
+      <li>
+        <ul class="mobile-nav-list">
+          <li>
+            <a href="universal-design-system.html">
+              Universal Design System
+            </a>
+          </li>
+          <li>
+            <a href="one-connect.html">
+              OneConnect
+            </a>
+          </li>
+          <li>
+            <a href="casys.html">
+              Casys
+            </a>
+          </li>
+          <li>
+            <a href="videnci.html">
+              Videnci Sign-up
+            </a>
+          </li>
+          <li>
+            <a href="videnci-design-system.html">
+              Videnci Design System
+            </a>
+          </li>
+          <li>
+            <a href="final-price.html">
+              Final Price
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/joao-nadal/">
+          Contact me 
+          <svg viewBox="0 0 72 72"><path d="M64 64H8V8h28V0H8a8 8 0 0 0-8 8v56a8 8 0 0 0 8 8h56c4.4 0 8-3.6 8-8V36h-8v28ZM44 0v8h14.36L19.04 47.32l5.64 5.64L64 13.64V28h8V0H44Z"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="src/joao-nadal-resume.pdf" download>
+          Resume
+          <svg viewBox="0 0 72 72"><path d="M64 64H8V8h28V0H8a8 8 0 0 0-8 8v56a8 8 0 0 0 8 8h56c4.4 0 8-3.6 8-8V36h-8v28ZM44 0v8h14.36L19.04 47.32l5.64 5.64L64 13.64V28h8V0H44Z"/></svg>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <section id="welcome-section" class="welcome-section">
     <div class="hero">
       <img src="src/img/profile.webp" class="avatar" width="100" height="100" alt="profile picture of John">
       <h3>
@@ -244,7 +301,7 @@
       
       
       </section>
-      <section class="skills-container">
+      <section class="skills-container mobile-hidden">
       <h3>Skills</h3>
       <div class="skills">
         <div class="skills-row">
@@ -348,11 +405,17 @@
     <p>
       Let's get in touch 😉. Talk about tech, products and ideas over a good cup of coffee ☕️.
     </p>
-    <p>
+    <p id="reach-out">
       Reach out via
       <a href="https://www.linkedin.com/in/joao-nadal/" target="_blank" class="btn contact-details">&nbsp;LinkedIn </a>
       &nbsp;or
-      <a href="mailto:jh.nadal@icloud.com">&nbsp;email</a>
+      <a href="mailto:jh.nadal@icloud.com">&nbsp;E-mail</a>
+    </p>
+
+    <p id="reach-out-mobile">
+      Reach out:
+      <a href="https://www.linkedin.com/in/joao-nadal/" target="_blank" class="btn contact-details">LinkedIn </a>
+      <a href="mailto:jh.nadal@icloud.com">E-mail</a>
     </p>
   </footer>
 
@@ -362,7 +425,7 @@
       x.style.display = "none";
     }
 
-    function hoverSubmenu(){
+    function enterSubmenu(){
         var workButton = document.getElementById("work");
         var submenu = document.getElementById("submenuDesk");
         submenu.focus();
@@ -374,7 +437,15 @@
         submenu.classList.add("hidden");
       }
 
-      
+      function toggleMobileMenu(){
+        var menuButton = document.getElementById("mobile-nav-menu");
+        var closeButton = document.getElementById("mobile-nav-close");
+        var mobileSubmenu = document.getElementById("mobile-nav-list");
+
+        menuButton.classList.toggle("hidden");
+        closeButton.classList.toggle("hidden");
+        mobileSubmenu.classList.toggle("hidden");
+      }
     </script>
 
 </body>

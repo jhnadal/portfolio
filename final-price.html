@@ -25,13 +25,13 @@
     <button onclick="myFunction()">I understand</button>
   </div>
   
-  <nav id="navbar" class="nav">
+  <nav id="navbar" class="nav mobile-hidden">
     <span class="nav-name"> <a href="./">Joao Nadal (John)</a></span>
     <ul class="nav-list">
       <li >
         <a href="./">Home</a>
       </li>
-      <li class="nav-item-active">
+      <li id="work" onmouseenter="enterSubmenu()" onclick="enterSubmenu()">
         <a href="#">Work</a>
       </li>
       <li>
@@ -49,7 +49,7 @@
     </ul>
   </nav>
 
-  <div class="submenu">
+  <div class="submenu hidden mobile-hidden" id="submenuDesk" onmouseleave="exitSubmenu()">
     <ul>
       <li>
         <a href="universal-design-system.html">
@@ -83,6 +83,65 @@
       </li>
     </ul>
   </div>
+
+  <nav id="mobile-navbar" class="mobile-nav">
+    <span id="mobile-navbar-header">
+      <span class="mobile-nav-name"> <a href="./">Joao Nadal (John)</a></span>
+      <span id="mobile-nav-menu" onclick="toggleMobileMenu()">Menu</span>
+      <span id="mobile-nav-close" onclick="toggleMobileMenu()" class="hidden">Close</span>
+    </span>
+    <ul class="mobile-nav-list hidden" id="mobile-nav-list">
+      <li >
+        <a href="./">Home</a>
+      </li>
+      <li>
+        <ul class="mobile-nav-list">
+          <li>
+            <a href="universal-design-system.html">
+              Universal Design System
+            </a>
+          </li>
+          <li>
+            <a href="one-connect.html">
+              OneConnect
+            </a>
+          </li>
+          <li >
+            <a href="casys.html">
+              Casys
+            </a>
+          </li>
+          <li>
+            <a href="videnci.html">
+              Videnci Sign-up
+            </a>
+          </li>
+          <li>
+            <a href="videnci-design-system.html">
+              Videnci Design System
+            </a>
+          </li>
+          <li class="mobile-nav-item-active">
+            <a href="final-price.html">
+              Final Price
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/joao-nadal/">
+          Contact me 
+          <svg viewBox="0 0 72 72"><path d="M64 64H8V8h28V0H8a8 8 0 0 0-8 8v56a8 8 0 0 0 8 8h56c4.4 0 8-3.6 8-8V36h-8v28ZM44 0v8h14.36L19.04 47.32l5.64 5.64L64 13.64V28h8V0H44Z"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="src/joao-nadal-resume.pdf" download>
+          Resume
+          <svg viewBox="0 0 72 72"><path d="M64 64H8V8h28V0H8a8 8 0 0 0-8 8v56a8 8 0 0 0 8 8h56c4.4 0 8-3.6 8-8V36h-8v28ZM44 0v8h14.36L19.04 47.32l5.64 5.64L64 13.64V28h8V0H44Z"/></svg>
+        </a>
+      </li>
+    </ul>
+  </nav>
 
   <section id="welcome-section" class="welcome-section">
     <div class="hero">
@@ -180,11 +239,17 @@
       <p>
         Let's get in touch 😉. Talk about tech, products and ideas over a good cup of coffee ☕️.
       </p>
-      <p>
+      <p id="reach-out">
         Reach out via
         <a href="https://www.linkedin.com/in/joao-nadal/" target="_blank" class="btn contact-details">&nbsp;LinkedIn </a>
         &nbsp;or
-        <a href="mailto:jh.nadal@icloud.com">&nbsp;email</a>
+        <a href="mailto:jh.nadal@icloud.com">&nbsp;E-mail</a>
+      </p>
+  
+      <p id="reach-out-mobile">
+        Reach out:
+        <a href="https://www.linkedin.com/in/joao-nadal/" target="_blank" class="btn contact-details">LinkedIn </a>
+        <a href="mailto:jh.nadal@icloud.com">E-mail</a>
       </p>
     </footer>
 
@@ -193,6 +258,28 @@
         var x = document.getElementById("mobile-message");
         x.style.display = "none";
       }
+  
+      function enterSubmenu(){
+          var workButton = document.getElementById("work");
+          var submenu = document.getElementById("submenuDesk");
+          submenu.focus();
+          submenu.classList.remove("hidden");
+        }
+  
+        function exitSubmenu(){
+          var submenu = document.getElementById("submenuDesk");
+          submenu.classList.add("hidden");
+        }
+  
+        function toggleMobileMenu(){
+          var menuButton = document.getElementById("mobile-nav-menu");
+          var closeButton = document.getElementById("mobile-nav-close");
+          var mobileSubmenu = document.getElementById("mobile-nav-list");
+  
+          menuButton.classList.toggle("hidden");
+          closeButton.classList.toggle("hidden");
+          mobileSubmenu.classList.toggle("hidden");
+        }
       </script>
 
   </body>
