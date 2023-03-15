@@ -30,7 +30,7 @@
       <li class="nav-item-active">
         <a href="./">Home</a>
       </li>
-      <li>
+      <li id="work" onmouseover="hoverSubmenu()">
         <a href="universal-design-system.html">Work</a>
       </li>
       <li>
@@ -51,7 +51,42 @@
     </ul>
   </nav>
 
-  <section id="welcome-section" class="welcome-section">
+  <div class="submenu hidden" id="submenuDesk">
+    <ul>
+      <li class="submenu-active">
+        <a href="universal-design-system.html">
+          Universal Design System
+        </a>
+      </li>
+      <li>
+        <a href="one-connect.html">
+          OneConnect
+        </a>
+      </li>
+      <li>
+        <a href="casys.html">
+          Casys
+        </a>
+      </li>
+      <li>
+        <a href="videnci.html">
+          Videnci Sign-up
+        </a>
+      </li>
+      <li>
+        <a href="videnci-design-system.html">
+          Videnci Design System
+        </a>
+      </li>
+      <li>
+        <a href="final-price.html">
+          Final Price
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <section id="welcome-section" class="welcome-section" onmouseenter="exitSubmenu()">
     <div class="hero">
       <img src="src/img/profile.webp" class="avatar" width="100" height="100" alt="profile picture of John">
       <h3>
@@ -326,6 +361,20 @@
       var x = document.getElementById("mobile-message");
       x.style.display = "none";
     }
+
+    function hoverSubmenu(){
+        var workButton = document.getElementById("work");
+        var submenu = document.getElementById("submenuDesk");
+        submenu.focus();
+        submenu.classList.remove("hidden");
+      }
+
+      function exitSubmenu(){
+        var submenu = document.getElementById("submenuDesk");
+        submenu.classList.add("hidden");
+      }
+
+      
     </script>
 
 </body>
