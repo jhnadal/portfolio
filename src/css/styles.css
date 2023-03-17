@@ -606,6 +606,10 @@ background-image: url("https://jhnadal.github.io/portfolio/src/img/covers/final-
     text-decoration-thickness: 2px;
   }
 
+  .area-card{
+    width: auto;
+  }
+
   .hidden{
     display: none;
   }
@@ -700,6 +704,7 @@ background-image: url("https://jhnadal.github.io/portfolio/src/img/covers/final-
     border-radius: 20px;
     margin: 1rem 0;
     padding:32px 24px 16px 24px;
+    
   }
 
   .area-card-title{
@@ -715,26 +720,6 @@ background-image: url("https://jhnadal.github.io/portfolio/src/img/covers/final-
     font-size: 1.25rem;
   }
 
-  .area-card > ul {
-    width: 100%;
-  }
-
-  .area-card > ul > li{
-    border-bottom: solid 1px var(--grey-inactive);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 0;
-    width: 100%;
-  }
-
-  .area-card > ul > li > img{
-    width: 1.5rem;
-    background-color: var(--grey1);
-    padding: 0.25rem;
-    border-radius: 100%;
-  }
 
 .skills-container{
   display: flex;

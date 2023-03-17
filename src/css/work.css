@@ -591,3 +591,8 @@ footer > p {
         border-bottom: 1px solid var(--grey-inactive);
       }
   }
+
+  section{
+    gap:0;
+    padding: 0 8rem;
+}
